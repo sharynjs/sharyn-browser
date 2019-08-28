@@ -12,3 +12,27 @@ const UpdateBanner = () => (
   </div>
 )
 ```
+
+## getFormData
+
+**`getFormData(formElement, omitEmptyFields=false)`**: Gives you the `FormData` of a `form` element.
+
+```jsx
+const Form = () => {
+  const form = useRef(null)
+  return (
+    <>
+      <form ref={form}>
+        <input name="firstname" />
+        <input name="lastname" />
+      </form>
+      <button onClick={() => console.log(getFormData(form.current))}>
+        Log all form values
+      </button>
+      <button onClick={() => console.log(getFormData(form.current, true))}>
+        Log truthy form values
+      </button>
+    </>
+  )
+}
+```

@@ -1,3 +1,4 @@
 module.exports = {
-  clearCaches: require('./clearCaches')
+  clearCaches: require('./clearCaches'),
+  getFormData: require('./getFormData'),
 }
